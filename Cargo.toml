@@ -1,0 +1,43 @@
+[package]
+name = "evapi"
+version = "0.1.0"
+authors = ["Maerten <seris@protonmail.ch>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+lto = "fat"
+opt-level = "s"
+
+[dependencies]
+lazy_static = "1.4"
+libloading = "0.6"
+winapi = { version = "0.3", features = ["wingdi", "wincon", "windef", "winuser", "handleapi", "tlhelp32", "psapi", "processthreadsapi", "winerror", "combaseapi", "std", "ntdef", "winsock2", "iphlpapi", "libloaderapi", "winbase", "minwindef", "ipexport", "shlobj", "knownfolders"] }
+reqwest = { version = "0.10", features = ["rustls-tls", "gzip", "cookies"]  }
+tokio = { version = "0.2", features = ["full"], default-features = false }
+ring = "0.16"
+obfstr = "0.2.2"
+widestring = "0.4.3"
+sqlx = { version = "0.4.2", features = ["runtime-tokio-rustls", "sqlite"], default-features = false }
+des = "0.6.0"
+der-parser = "5.0.0"
+sha1 = "0.6.0"
+hmac = "0.10.1"
+aes = "0.6.0"
+block-modes = "0.7.0"
+serde_json = "1.0"
+serde = "1.0"
+base64 = "0.13.0"
+uuid = { version = "0.8.2", features = ["serde", "v4"] }
+walkdir = "2.3.1"
+regex = "1.4.3"
+flate2 = "1.0.19"
+os_info = "3.0"
+png = "0.16.8"
+bitvec = "0.20.1"
+chrono = "0.4"
+rand = "0.8"
+proxy_cfg = "0.3.6"
+url = "2"
+tokio-tungstenite = "0.13"

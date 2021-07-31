@@ -1,0 +1,1 @@
+- Installer -> base64 exec & embed obfstr 
